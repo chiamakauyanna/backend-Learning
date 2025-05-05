@@ -1,4 +1,3 @@
-
 # 🛠️ Simple Items API (CRUD)
 
 A basic backend API built with Express.js to perform CRUD operations on an array of items.
@@ -26,27 +25,34 @@ A basic backend API built with Express.js to perform CRUD operations on an array
 ## 🔄 API Endpoints
 
 ### ✅ Get all items
+
 - `GET /items`
 
 ### 🔍 Get item by ID
+
 - `GET /items/:id`
 
 ### ➕ Create a new item
+
 - `POST /items`
 - **Body:**
+
   ```json
   {
     "name": "Backpack",
+    "description": "Spacious and durable backpack",
     "inStock": true
   }
   ```
 
 - **Response:**
+
   ```json
   {
     "message": "Item created",
     "item": {
       "name": "Backpack",
+      "description": "Spacious and durable backpack",
       "inStock": true,
       "id": "f19b7e56-f0a5-4c56-b827-cc5d4c04c147"
     }
@@ -54,21 +60,26 @@ A basic backend API built with Express.js to perform CRUD operations on an array
   ```
 
 ### ✏️ Update an item
+
 - `PUT /items/:id`
 - **Body (any field optional):**
+
   ```json
   {
     "name": "Updated Backpack",
+    "description": "Updated description",
     "inStock": false
   }
   ```
 
 - **Response:**
+
   ```json
   {
     "message": "Item updated",
     "item": {
       "name": "Updated Backpack",
+      "description": "Updated description",
       "inStock": false,
       "id": "f19b7e56-f0a5-4c56-b827-cc5d4c04c147"
     }
@@ -76,6 +87,7 @@ A basic backend API built with Express.js to perform CRUD operations on an array
   ```
 
 ### ❌ Delete an item
+
 - `DELETE /items/:id`
 - **Response:**
   ```json
